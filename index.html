@@ -1,62 +1,54 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="services.html">services</a>
-  <a href="contact.html">Contact</a>
-  <a href="about.html">About</a>
-</div>
-
-<div style="padding-left:16px">
-  <h2>Beans And Brew</h2>
-  <p>Some content..</p>
-</div>
-
-
-
-
-
-
-<div>
-    <footer>
-  <p>Author: Hege Refsnes<br>
-  <a href="mailto:hege@example.com">hege@example.com</a></p>
-</footer>
-</div>
-</body>
-</html>
+  <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+           *{
+              margin: 0;
+              padding: 0;
+           }
+           header{
+              display: flex;
+              flex-direction: row; /* This is default so you can omit it but it's good to be explicit  */
+              justify-content: flex-start; /* This will snap all content of header to the left due to 'flex-direction: row'  */
+              background-color: white;
+              border-bottom: solid;
+              padding: 0.5rem 1rem; /* Padding top/bottom then left/right. 1rem = default pixel size of html font (14px or 16px etc) so 0.5rem = 7px or 8px  */
+            }
+           header > img{
+              height: 120px; /* Set the height of your image  */
+              width: auto; /* Keep the height/width ratio of source image  */
+           }
+           nav{
+              display: flex;
+              flex-direction: row;
+              flex: 1; /* Use the rest of the available space of the <header> */
+              justify-content: center; /* Keep the links in the center of this element  */
+              align-items: center; /* Puts the links vertically in the center of the <nav> */
+           }
+           nav a{
+              padding: 1rem;
+              text-decoration: none; /* Take away the default link styling  */
+              color: black;
+              border-bottom: 2px solid transparent;
+           }
+           nav  a:hover{
+              border-bottom: 2px solid black;
+              transition: border-bottom 0.4s ease-in;
+           }
+        </style>
+     </head>
+     <body>
+        <header class="header">
+           <img class="logo" src="./images/beans-and-brew-logo.png" alt="Beans and Brew Logo">
+           <nav class="navbar">
+              <a href="./index.html">HOME</a>
+              <a href="./about.html">ABOUT US</a>
+              <a href="./services.html">SERVICES</a>
+              <a href="./contact.html">CONTACT</a>
+           </nav>
+        </header>
+     </body>
+  </html>
