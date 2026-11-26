@@ -31,25 +31,56 @@
            nav a{
               padding: 1rem;
               text-decoration: none; /* Take away the default link styling  */
-              color: black;
+              color: purple;
               border-bottom: 2px solid transparent;
            }
            nav  a:hover{
+              color: brown;
               border-bottom: 2px solid brown;
               transition: border-bottom 0.4s ease-in;
            }
         </style>
      </head>
      <body>
-        <header class="header">
-           <img class="logo" src="./images/beans-and-brew-logo.png" alt="Beans and Brew Logo">
-           <nav class="navbar">
-              <a href="./index.html">HOME</a>
-              <a href="./about.html">ABOUT US</a>
-              <a href="./services.html">SERVICES</a>
-              <a href="./contact.html">CONTACT</a>
-           </nav>
-        </header>
+<nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/beans-logo.png" alt="Beans and Brew Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">SERVICES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">CONTACT</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
      </body>
   </html>
 
